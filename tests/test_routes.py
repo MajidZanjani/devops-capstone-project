@@ -97,6 +97,7 @@ class TestAccountService(TestCase):
             json=account.serialize(),
             content_type="application/json"
         )
+        
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         # Make sure location header is set
